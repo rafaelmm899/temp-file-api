@@ -1,0 +1,25 @@
+{
+  "name": "temp-file-api",
+  "version": "1.0.0",
+  "description": "A lightweight REST API to manage temporary files, including upload, retrieval, and scheduled cleanup.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rafaelmm899/temp-file-api.git"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "api",
+    "express"
+  ],
+  "author": "Jose Rafael Mata Milano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelmm899/temp-file-api/issues"
+  },
+  "homepage": "https://github.com/rafaelmm899/temp-file-api#readme"
+}
