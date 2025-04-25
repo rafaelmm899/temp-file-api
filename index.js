@@ -1,34 +1,13 @@
 import express from 'express';
-import upload from './services/UploadFileService.js';
-import { unlink, existsSync } from 'fs';
+import filesRoutes from './routes/filesRoutes.js';
+import healthCheckRoutes from './routes/healthCheckRoutes.js';
 
 const DEFAULT_PORT = 3000;
 const port = process.env.PORT || DEFAULT_PORT;
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
-
-app.post('/upload', upload.single('file'), (req, res) => {
-    res.send('File uploaded successfully');
-});
-
-app.delete('/files/:filename', (req, res) => {
-    const filename = req.params.filename;
-    const filePath = `./uploads/${filename}`;
-    if (!existsSync(filePath)) {
-        return res.status(404).send('File not found for deletion');
-    }
-
-    unlink(filePath, (err) => {
-        if (err) {
-            console.error(err);
-            return res.status(500).send('Error deleting file');
-        }
-    });
-    res.send('File deleted successfully');
-});
+app.use('/files', filesRoutes);
+app.use('/health', healthCheckRoutes);
 
 const serverRunningHandler = () => console.log(`Server running on port ${port}...`);
 
