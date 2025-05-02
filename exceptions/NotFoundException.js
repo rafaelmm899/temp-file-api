@@ -1,8 +1,8 @@
-class NotFoundException extends Error {
+import { Exception } from './Exception.js';
+
+class NotFoundException extends Exception {
     constructor(message = 'Entity Not found') {
-        super();
-        this.message = message;
-        this.code = 'NOT_FOUND_ERROR';
+        super(message, 'NOT_FOUND_ERROR', 404);
     }
 }
 

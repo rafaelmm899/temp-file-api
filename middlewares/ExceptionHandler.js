@@ -1,5 +1,4 @@
-import NotFoundException from '../exceptions/NotFoundException.js';
-import ValidationException from '../exceptions/ValidationException.js';
+import { Exception } from '../exceptions/Exception.js';
 
 const formatError = (code, status, message) => {
     return {
@@ -16,12 +15,8 @@ const ExceptionHandler = (err, req, res, next) => {
         return next();
     }
 
-    if (err instanceof NotFoundException) {
-        return res.status(404).json(formatError(err.code, 404, err.message));
-    }
-
-    if (err instanceof ValidationException) {
-        return res.status(422).json(formatError(err.code, 422, err.message));
+    if (err instanceof Exception) {
+        return res.status(err.status).json(formatError(err.code, err.status, err.message));
     }
 
     return res.status(500).json(formatError('UNEXPECTED_ERROR', 500, err.message));
