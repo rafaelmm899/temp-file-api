@@ -5,36 +5,37 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --env-file=.env --watch index.js"
+      "dev": "node --env-file=.env --watch index.js",
+      "start": "node --env-file=.env index.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/rafaelmm899/temp-file-api.git"
+      "type": "git",
+      "url": "git+ssh://git@github.com/rafaelmm899/temp-file-api.git"
   },
   "keywords": [
-    "node",
-    "javascript",
-    "api",
-    "express"
+      "node",
+      "javascript",
+      "api",
+      "express"
   ],
   "author": "Jose Rafael Mata Milano",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rafaelmm899/temp-file-api/issues"
+      "url": "https://github.com/rafaelmm899/temp-file-api/issues"
   },
   "homepage": "https://github.com/rafaelmm899/temp-file-api#readme",
   "devDependencies": {
-    "@eslint/js": "^9.25.1",
-    "eslint": "^9.25.1",
-    "eslint-config-prettier": "^10.1.2",
-    "eslint-plugin-prettier": "^5.2.6",
-    "globals": "^16.0.0",
-    "prettier": "^3.5.3"
+      "@eslint/js": "^9.25.1",
+      "eslint": "^9.25.1",
+      "eslint-config-prettier": "^10.1.2",
+      "eslint-plugin-prettier": "^5.2.6",
+      "globals": "^16.0.0",
+      "prettier": "^3.5.3"
   },
   "dependencies": {
-    "express": "^5.1.0",
-    "joi": "^17.13.3",
-    "multer": "^1.4.5-lts.2",
-    "node-cron": "^3.0.3"
+      "express": "^5.1.0",
+      "joi": "^17.13.3",
+      "multer": "^1.4.5-lts.2",
+      "node-cron": "^3.0.3"
   }
 }
