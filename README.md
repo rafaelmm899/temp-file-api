@@ -51,9 +51,6 @@ API for handling temporary files using Express.js.
 ## Bug Reporting
 If you find a bug, please report it in the [issues section](https://github.com/rafaelmm899/temp-file-api/issues).
 
-## Documentation
-For more information, visit the [project documentation](https://github.com/rafaelmm899/temp-file-api#readme).
-
 ## Author
 Jose Rafael Mata Milano
 
